@@ -73,6 +73,24 @@ public class User implements UserDetails, Serializable{
 
 		return authorities;
 	}
+	
+	public User() {
+	}
+
+	public User(Long id, String username, String password, String email, String fullName, Boolean accountNonExpired,
+			Boolean accountNonLocked, Boolean credentialsNonExpired, Boolean enabled, List<Role> roles) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.fullName = fullName;
+		this.accountNonExpired = accountNonExpired;
+		this.accountNonLocked = accountNonLocked;
+		this.credentialsNonExpired = credentialsNonExpired;
+		this.enabled = enabled;
+		this.roles = roles;
+	}
 
 	@Override
 	public String getPassword() {
