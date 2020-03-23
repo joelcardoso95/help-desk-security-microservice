@@ -20,8 +20,8 @@ services:
   help-desk-security:
     image: joelmarcos/help-desk-security
     restart: always
-    build: help-desk-security
-    working_dir: help-desk-security
+    build: heslp-desk-security
+    working_dir: heslp-desk-security
     environment: 
       TZ: America/Sao_Paulo
       SPRING_BOOT_ENVIRONMENT: Production
