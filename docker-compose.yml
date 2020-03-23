@@ -20,6 +20,8 @@ services:
   help-desk-security:
     image: joelmarcos/help-desk-security
     restart: always
+    build: ./src
+    working_dir: ./src
     environment: 
       TZ: America/Sao_Paulo
       SPRING_BOOT_ENVIRONMENT: Production
