@@ -18,4 +18,4 @@ build-docker:
   script:
   - docker-compose -f docker-compose.yml build
   - docker push joelmarcos/mysql-help-desk-security:latest
-  - docker psuh joelmarcos/help-desk-security:latest
+  - docker push joelmarcos/help-desk-security:latest
