@@ -21,6 +21,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "user")
 public class User implements UserDetails, Serializable{
@@ -34,6 +36,7 @@ public class User implements UserDetails, Serializable{
 	@Column(unique = true)
 	private String username;
 	
+	@JsonIgnore
 	@Column
 	private String password;
 	

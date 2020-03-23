@@ -32,6 +32,11 @@ public class UserService {
 		return userRepository.save(user);
 	}
 	
+	public User findByUsername(String username) {
+		User user = userRepository.findByUsername(username);
+		return user;
+	}
+	
 	public User fromDTO (NewUserDTO newUserDTO) {
 		List<Role> roles = roleRepository.findAllById(newUserDTO.getRoleIds());
 		User user = new User(null, newUserDTO.getUsername(), passwordEnconder.encode(newUserDTO.getPassword()), newUserDTO.getEmail(), newUserDTO.getFullName(), true, true, true, true, roles);

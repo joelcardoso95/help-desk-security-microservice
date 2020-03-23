@@ -13,5 +13,4 @@ public class HeslpDeskSecurityApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HeslpDeskSecurityApplication.class, args);
 	}
-
 }

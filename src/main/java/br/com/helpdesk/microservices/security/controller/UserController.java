@@ -35,6 +35,12 @@ public class UserController {
 		return ResponseEntity.created(uri).build();
 	}
 	
+	@GetMapping("/loadLoggedUser")
+	public ResponseEntity<User> findByUsername (Principal loggedUser) {
+		User user = userService.findByUsername(loggedUser.getName());
+		return ResponseEntity.ok().body(user);
+	}
+	
 	@GetMapping("/user")
 	public Principal user (Principal user) {
 		return user;
