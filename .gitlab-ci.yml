@@ -1,5 +1,10 @@
 image: docker:stable
 
+stages:
+- build
+- test
+- deploy
+
 services:
 - docker:dind 
 
@@ -15,6 +20,8 @@ before_script:
 
 build-docker:
   stage: build
+  tags:
+  - executor-tarefas
   script:
   - docker-compose -f docker-compose.yml build
   - docker push joelmarcos/mysql-help-desk-security:latest
